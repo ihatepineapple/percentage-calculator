@@ -1,65 +1,72 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Percentage Calculator</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
 
-<body>
-    <header>
+  <body>
+    <div class="wrapper">
+      <header>
         <h1>Percentage Calculator</h1>
-    </header>
-    <section id="operations1">
-        <p>Calculate the percentage of a number</p>
-        <form>
+      </header>
+      <section id="operations1">
+        <p class="explanation">Calculate the percentage of a number</p>
+        <div class="operationWrapper">
+          <form>
             <span>What is </span>
-            <input id="p1" type="number" max="3" autofocus>
+            <input id="p1" type="number" size="3" autofocus class="pClass" />
             <span> % of </span>
-            <input id="x1" type="number"  max="7">
+            <input id="x1" type="number" size="7" class="xClass" />
             <span> ? </span>
-
-        </form>
-        <div>
-            <button id="calculate1" onclick="calculateOperation1()">calculate</button>
-            <span id="answer1"></span>
+          </form>
+          <span id="answer1"></span>
         </div>
-    </section>
+        <button id="calculate1" onclick="calculateOperation1()">
+          calculate
+        </button>
+      </section>
 
-    <section id="operations2">
-        <p>Calculate what percentage is number of another</p>
-        <form>
-            <input id="p2" type="number" max="3" autofocus>
+      <section id="operations2">
+        <p class="explanation">
+          Calculate what percentage is number of another
+        </p>
+        <div class="operationWrapper">
+          <form>
+            <input id="p2" type="number" max="3" autofocus class="pClass" />
             <span> is what percentage of </span>
-            <input id="x2" type="number"  max="7">
+            <input id="x2" type="number" max="7" class="xClass" />
             <span> ? </span>
+          </form>
 
-        </form>
-        <div>
-            <button id="calculate2" onclick="calculateOperation2()">calculate</button>
-            <span id="answer2"></span>
+          <span id="answer2"></span>
         </div>
-    </section>
+        <button id="calculate2" onclick="calculateOperation2()">
+          calculate
+        </button>
+      </section>
 
-    <section id="operations3">
-        <p>Calculate percentage increase</p>
-        <form>
+      <section id="operations3">
+        <p class="explanation">Calculate percentage increase</p>
+        <div class="operationWrapper">
+          <form>
             <span> from </span>
-            <input id="p3" type="number" max="3" autofocus>
+            <input id="p3" type="number" max="3" autofocus class="pClass" />
             <span> to </span>
-            <input id="x3" type="number"  max="7">
-        </form>
-        <div>
-            <button id="calculate3" onclick="calculateOperation3()">calculate</button>
-            <span id="answer3"></span>
+            <input id="x3" type="number" max="7" class="xClass" />
+          </form>
+
+          <span id="answer3"></span>
         </div>
-    </section>
-
+        <button id="calculate3" onclick="calculateOperation3()">
+          calculate
+        </button>
+      </section>
+    </div>
     <script src="./scripts/index.js" async defer></script>
-</body>
-
+  </body>
 </html>
